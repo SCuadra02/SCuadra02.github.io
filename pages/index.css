@@ -1,165 +1,114 @@
-@import url(fonts/inter.css);
+@import url(/fonts/inter.css);
 
 /* page */
-@import url(../blocks/page/page.css);
+@import url(/blocks/page/page.css);
 
-/* lead  */
-@import url(../blocks/lead/lead.css);
-@import url(../blocks/lead/__image/lead__image.css);
-@import url(../blocks/lead/__logo/lead__logo.css);
-@import url(../blocks/lead/__subtitle/lead__subtitle.css);
-@import url(../blocks/lead/__title/lead__title.css);
+/* header */
+@import url(/blocks/header/header.css);
+@import url(/blocks/header/__logo/header__logo.css);
 
-/* intro  */
-@import url(../blocks/intro/intro.css);
-@import url(../blocks/intro/__quote-author/intro__quote-author.css);
-@import url(../blocks/intro/__quote/intro__quote.css);
-@import url(../blocks/intro/__text/intro__text.css);
-@import url(../blocks/intro/__title/intro__title.css);
+/* profile */
+@import url(/blocks/profile/profile.css);
+@import url(/blocks/profile/about-me/profile__about-me.css);
+@import url(/blocks/profile/__text/profile__text.css);
+@import url(/blocks/profile/__picture/profile__picture.css);
+@import url(/blocks/profile/__name/profile__name.css);
+@import url(/blocks/profile/__info/profile__info.css);
+@import url(/blocks/profile/__edit-button/profile__edit-button.css);
+@import url(/blocks/profile/__add-button/profile__add-button.css);
+@import url(/blocks/profile/__button-img/profile__button-img.css);
 
-/* photo-grid  */
-@import url(../blocks/photo-grid/photo-grid.css);
-@import url(../blocks/photo-grid/__item/photo-grid__item.css);
+/* popup */
+@import url(/blocks/popup/popup.css);
+@import url(/blocks/popup/__container/popup__container.css);
+@import url(/blocks/popup/__btn-close/popup__btn-close.css);
 
-/* places  */
-@import url(../blocks/places/places.css);
+/* cards */
+@import url(/blocks/cards/cards.css);
+@import url(/blocks/card/card.css);
+@import url(/blocks/card/__title/card__title.css);
+@import url(/blocks/card/__text/card__text.css);
+@import url(/blocks/card/__image/card__image.css);
+@import url(/blocks/card/__button/card__heart.css);
 
-/* place  */
-@import url(../blocks/place/place.css);
-@import url(../blocks/place/__button/place__button.css);
-@import url(../blocks/place/__image/place__image.css);
-@import url(../blocks/place/__paragraph/place__paragraph.css);
-@import url(../blocks/place/__title/place__title.css);
-@import url(../blocks/place/__url-heading/place__url-heading.css);
-@import url(../blocks/place/__website/place__website.css);
+/* footer */
+@import url(/blocks/footer/footer.css);
 
-/* cover  */
-@import url(../blocks/cover/cover.css);
-@import url(../blocks/cover/__content/cover__content.css);
-@import url(../blocks/cover/__image/cover__image.css);
-@import url(../blocks/cover/__subtitle/cover__subtitle.css);
-@import url(../blocks/cover/__text/cover__text.css);
-@import url(../blocks/cover/__title/cover__title.css);
-
-/* footer  */
-@import url(../blocks/footer/footer.css);
-@import url(../blocks/footer/__copyright/footer__copyright.css);
-
-@media screen and (max-width: 800px) {
-  .lead__image {
-    max-width: 100vw;
-    width: 100%;
+@media screen and (max-width: 1280px) {
+  .header__logo {
+    margin-left: 27px;
   }
+}
 
-  .intro__quote-author {
-    display: block;
-    position: static;
-    text-align: end;
+@media screen and (max-width: 880px) {
+  .profile {
+    padding: 0 24px;
   }
-
-  .photo-grid {
-    max-width: 720px;
-    margin: 0 auto 88px;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 16px;
-    padding: 0 16px;
+  .cards {
+    grid-template-columns: 1fr 1fr;
+    padding: 0 20px;
   }
-
-  .photo-grid__item {
-    max-width: 352px;
-  }
-
-  .places {
-    padding: 0;
-    max-width: 720px;
-  }
-
-  .place {
-    gap: 0;
-    place-items: center;
-  }
-
-  .place__title {
-    place-self: start;
-    padding: 0 16px;
-  }
-
-  .place__website {
-    place-self: start;
-    padding: 0 16px;
-  }
-
-  .place__text {
-    place-self: start;
-    padding: 0 16px;
-  }
-
-  .place__image {
-    padding: 0 16px;
-  }
-
-  .place__title {
-    font-size: 42px;
+  .card {
+    margin: 0 auto;
+    max-width: 282px;
   }
 }
 
 @media screen and (max-width: 620px) {
-  .place {
-    grid-template-columns: 1fr;
-  }
-  .place__image {
-    max-width: 100vw;
-  }
-}
-
-@media screen and (max-width: 500px) {
-  .lead {
-    margin: 20px auto 44px;
-  }
-  .lead__logo {
-    margin-bottom: 50px;
-  }
-  .lead__title {
-    font-size: 40px;
-    line-height: 1.1;
-  }
-  .lead__subtitle {
-    font-size: 16px;
-    line-height: 1.25;
-  }
-  .intro__title {
-    font-size: 32px;
-    line-height: 1.1;
-  }
-  .intro__quote {
-    font-size: 24px;
-    line-height: 1.25;
+  .header__logo {
+    max-width: 126px;
+    margin: 28px 21px 31px;
   }
 
-  .photo-grid {
-    grid-template-columns: 1fr;
+  .profile {
+    flex-direction: column;
   }
 
-  .photo-grid__item {
-    max-width: 288px;
-    margin: 0 auto;
-  }
-  .place {
-    grid-template-columns: 1fr;
+  .profile__info {
+    flex-direction: column;
   }
 
-  .place__image {
-    padding: 0;
-    max-width: 100vw;
+  .profile__button-img {
+    display: none;
   }
 
-  .cover__title {
-    font-size: 32px;
-    line-height: 1.14;
+  .profile__button-img_rectangle {
+    display: block;
   }
 
-  .cover_subtitle {
+  .popup__btn-close {
+    width: 26px;
+    right: 10px;
+    top: -45px;
+  }
+
+  .profile__name {
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 27px;
+    text-align: center;
+  }
+
+  .profile__text {
+    justify-content: center;
+  }
+
+  .profile__about-me {
+    font-weight: 400;
     font-size: 14px;
-    line-height: 1.14;
+    line-height: 17px;
+    text-align: center;
+  }
+
+  .popup {
+    width: 70%;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .footer {
+    padding: 0 19px;
   }
 }

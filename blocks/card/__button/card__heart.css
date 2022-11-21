@@ -1,0 +1,22 @@
+.card__heart {
+  width: 21px;
+  stroke: #000000;
+  fill: none;
+  stroke-dashoffset: 54;
+  overflow: visible;
+  stroke-width: 2px;
+  transition: opacity 0.25s;
+}
+
+.card__heart:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.card__heart_liked {
+  fill: #000000;
+}
+
+.card__heart_liked:hover {
+  opacity: 1;
+}

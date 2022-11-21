@@ -1,0 +1,8 @@
+.profile__button-img {
+  width: 150px;
+}
+
+.profile__button-img_rectangle {
+  width: 282px;
+  display: none;
+}

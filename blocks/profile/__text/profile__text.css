@@ -1,0 +1,5 @@
+.profile__text {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 13px 18px;
+}

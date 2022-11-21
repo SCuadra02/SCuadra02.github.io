@@ -1,0 +1,7 @@
+.popup__btn-close {
+  width: 40px;
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  transition: opacity 0.25s ease-in-out;
+}
