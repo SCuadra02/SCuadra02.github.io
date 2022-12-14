@@ -31,7 +31,7 @@ body {
   color: #ffffff;
 }
 
-.page_mask {
+.page-mask {
   display: none;
   position: fixed;
   left: 0;
@@ -39,6 +39,7 @@ body {
   bottom: 0;
   top: 0;
   background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1;
 }
 
 .page_mask_opened {

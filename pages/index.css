@@ -30,6 +30,7 @@
 @import url(/blocks/card/__text/card__text.css);
 @import url(/blocks/card/__image/card__image.css);
 @import url(/blocks/card/__button/card__heart.css);
+@import url(/blocks/card/__remove/card__remove.css);
 
 /* footer */
 @import url(/blocks/footer/footer.css);
@@ -37,6 +38,10 @@
 @media screen and (max-width: 1280px) {
   .header__logo {
     margin-left: 27px;
+  }
+
+  .img-popup {
+    width: 80%;
   }
 }
 
@@ -100,8 +105,16 @@
     text-align: center;
   }
 
-  .popup {
-    width: 70%;
+  .edit-popup {
+    width: 282px;
+  }
+
+  .add-popup {
+    width: 282px;
+  }
+
+  .img-popup__image {
+    width: 80%;
   }
 
   .cards {

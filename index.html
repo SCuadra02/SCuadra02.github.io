@@ -15,6 +15,7 @@
     <header class="header">
       <img src="images/logo.svg" alt="Around the Us logo" class="header__logo">
     </header>
+    <div class="page-mask"></div>
     <section class="profile">
       <div class="profile__info">
         <img src="images/profile-pic.png" alt="Foto de perfil del Usuario" class="profile__picture">
@@ -27,92 +28,60 @@
       </div>
       <button class="btn profile__add-button">
         <img class="profile__button-img" src="images/add-button.svg" alt="Boton para añadir">
-        <img class="profile__button-img_rectangle" src="images/add-button_rectangle.svg" alt="">
+        <img class="profile__button-img profile__button-img_rectangle" src="images/add-button_rectangle.svg" alt="">
       </button>
     </section>
-    <div class="page_mask"></div>
-    <div class="popup">
-      <form class="popup__container">
-        <h3 class="popup__title">Editar perfil</h3>
-        <button class="btn popup__btn-close"><img src="images/close-icon.svg" alt="Boton para cerrar"></button>
-        <div class="popup__text-container">
-          <input id="name" type="text" class="popup__text" placeholder="Nombre">
-          <input id="about-me" type="text" class="popup__text" placeholder="Acerca de mí">
+
+    <div class="edit-popup">
+      <form novalidate class="form edit-popup__container">
+        <h3 class="edit-popup__title">Editar perfil</h3>
+        <button class="btn btn_close"><img src="images/close-icon.svg" alt="Boton para cerrar"></button>
+        <div class="edit-popup__text-container">
+          <input required type="text" minlength="2" maxlength="40" id="name-input" class="form__input edit-popup__text"
+            placeholder="Nombre">
+          <span class="form__input-error name-input-error"></span>
+          <input required type="text" minlength="2" maxlength="200" id="aboutme-input"
+            class="form__input edit-popup__text" placeholder="Acerca de mí">
+          <span class="form__input-error aboutme-input-error"></span>
         </div>
-        <button type="submit" class="btn popup__btn-save">Guardar</button>
+        <button type="submit" class="form__submit btn edit-popup__btn-save">Guardar</button>
+      </form>
+    </div>
+    <div class="add-popup">
+      <form class="form add-popup__container">
+        <h3 class="add-popup__title">Nuevo lugar</h3>
+        <button class="btn btn_close"><img src="images/close-icon.svg" alt="Boton para cerrar"></button>
+        <div class="add-popup__text-container">
+          <input required type="text" minlength="2" maxlength="30" id="title-input" class="form__input add-popup__text"
+            placeholder="Título">
+          <span class="form__input-error title-input-error"></span>
+          <input required type="url" id="url-input" class="form__input add-popup__text"
+            placeholder="Enlace a la imagen">
+          <span class="form__input-error url-input-error"></span>
+        </div>
+        <button type="submit" class="form__submit btn add-popup__btn-save">Crear</button>
       </form>
     </div>
     <section class="cards">
-      <article class="card">
-        <img src="images/yosemite.png" alt="Imagen de Yosemite" class="card__image">
-        <div class="card__text">
-
-          <h3 class="card__title">Valle de Yosemite</h3>
-          <svg xmlns="http://www.w3.org/2000/svg" class="card__heart" viewBox="2 2 20 20">
-            <path
-              d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z">
-            </path>
-          </svg>
-        </div>
-      </article>
-      <article class="card">
-        <img src="images/louise.png" alt="Imagen del lago louise|" class="card__image">
-        <div class="card__text">
-          <h3 class="card__title">Lago Louise
-          </h3>
-          <svg xmlns="http://www.w3.org/2000/svg" class="card__heart" viewBox="2 2 20 20">
-            <path
-              d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z">
-            </path>
-          </svg>
-        </div>
-      </article>
-      <article class="card">
-        <img src="images/calvas.png" alt="Imagen de las montañas calvas" class="card__image">
-        <div class="card__text">
-          <h3 class="card__title">Montañas Calvas
-          </h3>
-          <svg xmlns="http://www.w3.org/2000/svg" class="card__heart" viewBox="2 2 20 20">
-            <path
-              d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z">
-            </path>
-          </svg>
-        </div>
-      </article>
-      <article class="card">
-        <img src="images/latemar.png" alt="Imagen de latemar" class="card__image">
-        <div class="card__text">
-          <h3 class="card__title">Latemar</h3>
-          <svg xmlns="http://www.w3.org/2000/svg" class="card__heart" viewBox="2 2 20 20">
-            <path
-              d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z">
-            </path>
-          </svg>
-        </div>
-      </article>
-      <article class="card">
-        <img src="images/vanoise.png" alt="Imagen del parque nacional Vanoise" class="card__image">
-        <div class="card__text">
-          <h3 class="card__title">Vanoise National Park</h3>
-          <svg xmlns="http://www.w3.org/2000/svg" class="card__heart" viewBox="2 2 20 20">
-            <path
-              d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z">
-            </path>
-          </svg>
-        </div>
-      </article>
-      <article class="card">
-        <img src="images/braies.png" alt="Imagen del lago braies" class="card__image">
-        <div class="card__text">
-          <h3 class="card__title">Lago di Braies</h3>
-          <svg xmlns="http://www.w3.org/2000/svg" class="card__heart" viewBox="2 2 20 20">
-            <path
-              d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z">
-            </path>
-          </svg>
-        </div>
-      </article>
+      <template id="card">
+        <article class="card">
+          <img class="card__image">
+          <img class="card__remove" src="/images/trash.svg" alt="">
+          <div class="card__text">
+            <h3 class="card__title"></h3>
+            <img class="card__heart" src="/images/like-button.svg" alt="">
+          </div>
+        </article>
+      </template>
     </section>
+    <div class="img-popup">
+      <div class="img-popup__container">
+        <img class="img-popup__image" src=" ">
+        <button class="btn btn_close"><img src="images/close-icon.svg" alt="Boton para cerrar"></button>
+        <span class="img-popup__span">Nuevo lugar</span>
+      </div>
+    </div>
+
     <footer class="footer">
       <p class="footer__text">© 2022 Alrededor de los EEUU</p>
     </footer>
